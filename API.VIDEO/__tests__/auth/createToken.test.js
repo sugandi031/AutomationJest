@@ -45,6 +45,7 @@ describe('PWA-1 Create new Bearer token authorization with invalid API-KEY', () 
     });
     test('check jsonSchema and regex', () => {
         const isValidSchema = helper.jsonSchemaChecker(invalidResponse, invalidJsonSchema)
+        expect(invalidResponse.title).toBe("The API key is invalid.");
         expect(isValidSchema).toBe(true);
 
     });
